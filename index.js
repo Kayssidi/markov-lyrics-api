@@ -15,5 +15,9 @@ module.exports = async () => {
 		})
 	);
 	
-	return songs;
+	// for each song, only retieve the lyrics, then concatenate lyrics together.
+	const lyrics = songs.map(songJSON => { return songJSON.lyrics; });
+  let lyric = lyrics.reduce( (acc,val) => acc.concat(val) );
+  
+	return lyric;
 }
