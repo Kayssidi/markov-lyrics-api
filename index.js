@@ -19,5 +19,8 @@ module.exports = async () => {
 	const lyrics = songs.map(songJSON => { return songJSON.lyrics; });
   let lyric = lyrics.reduce( (acc,val) => acc.concat(val) );
   
+  lyric = lyric.replace(/\[.*\]/gm, "");
+	lyric = lyric.replace(/\n/gm, " ");
+	
 	return lyric;
 }
