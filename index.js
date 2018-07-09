@@ -1,4 +1,5 @@
 const Lyricist = require('lyricist/node6');
+const MarkovChain = require('markovchain');
 
 module.exports = async () => {
 
@@ -22,5 +23,12 @@ module.exports = async () => {
   lyric = lyric.replace(/\[.*\]/gm, "");
 	lyric = lyric.replace(/\n/gm, " ");
 	
-	return lyric;
+	// apply markov chain on lyric-string
+	const markov = new MarkovChain(lyric);
+	let newLyric = markov.end(30).process();
+	
+	// apply upper case to first letter and append the remaining lyric
+	newLyric = newLyric.charAt(0).toUpperCase() + newLyric.slice(1);
+	
+	return newLyric;
 }

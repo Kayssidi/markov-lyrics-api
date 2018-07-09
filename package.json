@@ -11,7 +11,7 @@
   "dependencies": {
     "lyricist": "^2.2.2",
     "markovchain": "^1.0.2",
-    "micro": "^9.3.2",
+    "micro": "^9.3.2"
   }
 }
 
