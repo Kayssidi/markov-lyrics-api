@@ -1,0 +1,7 @@
+{
+  "rules": [
+    { "pathname": "/api", "dest": "markovlyricsbot-qxrrikxjqh.now.sh" },
+    { "pathname": "/", "dest": "markovlyricsui-spztnwfmkm.now.sh" },
+    { "pathname": "/**", "dest": "markovlyricsui-spztnwfmkm.now.sh" }
+  ]
+}
