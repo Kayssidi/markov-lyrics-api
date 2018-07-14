@@ -1,0 +1,14 @@
+{
+  "name": "markovLyricsUI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^9.1.0"
+  }
+}
