@@ -23,13 +23,14 @@ export default class Index extends React.Component {
       jsonLyrics : undefined, // hold loaded lyrics string or undefined
       error : undefined,      // undefined or hold error description
     };
+    
+    this.onShowLyricsLayer = this.onShowLyricsLayer.bind(this);
+    this.onCloseLyricsLayer = this.onCloseLyricsLayer.bind(this);
   }
   
   onShowLyricsLayer()
   {
     this.setState( {showLayer:true} );
-    
-    console.log("onShowLyricsLayer");
     
     fetch('https://dwltkvn.now.sh/api')
         .then(response => response.text())
